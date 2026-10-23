@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-labelledby="title desc">
+<title id="title">Bếp điện đơn Cook — minh họa</title>
+<desc id="desc">Hình minh họa do dự án tạo, không phải ảnh thật của sản phẩm RetailRocket.</desc>
+<rect width="240" height="180" rx="20" fill="#f3f5ee"/>
+<circle cx="181" cy="38" r="25" fill="#e4ebde"/>
+<circle cx="47" cy="130" r="17" fill="#ece6d4"/>
+<ellipse cx="121" cy="158" rx="77" ry="8" fill="#dce5d7"/>
+<g stroke="#34564b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M53 70h134l11 68H42Z" fill="#ccd9d4"/><path d="M53 70h134l-8-13H61Z" fill="#e2e9e0"/><ellipse cx="120" cy="89" rx="41" ry="23" fill="#345750"/><ellipse cx="120" cy="89" rx="29" ry="15" fill="none" stroke="#a5bfaa"/><ellipse cx="120" cy="89" rx="18" ry="8" fill="none" stroke="#a5bfaa"/><rect x="97" y="119" width="46" height="8" rx="3" fill="#6b8c7a"/><circle cx="166" cy="124" r="7" fill="#e9d29e"/><path d="M56 141v6m128-6v6" stroke-width="5"/></g>
+</svg>

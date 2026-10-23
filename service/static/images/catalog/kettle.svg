@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-labelledby="title desc">
+<title id="title">Ấm đun nước Daily — minh họa</title>
+<desc id="desc">Hình minh họa do dự án tạo, không phải ảnh thật của sản phẩm RetailRocket.</desc>
+<rect width="240" height="180" rx="20" fill="#f3f5ee"/>
+<circle cx="181" cy="38" r="25" fill="#e4ebde"/>
+<circle cx="47" cy="130" r="17" fill="#ece6d4"/>
+<ellipse cx="121" cy="158" rx="77" ry="8" fill="#dce5d7"/>
+<g stroke="#34564b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M156 68q41-10 40 25t-37 33" fill="none" stroke="#658974" stroke-width="13"/><path d="M82 61h69l22 69q3 17-13 17H77q-16 0-13-17l8-28-24-32 35 10Z" fill="#c2d3bb"/><path d="M83 61h68l-8-12H91Z" fill="#98b29a"/><path d="M110 43h22" stroke-width="7" stroke-linecap="round"/><path d="M72 139h95v12H72Z" fill="#6b9079"/><rect x="105" y="80" width="24" height="47" rx="11" fill="#e4e8d4"/><path d="M113 91h8m-8 12h8m-8 12h8" stroke="#a0b09a"/></g>
+</svg>

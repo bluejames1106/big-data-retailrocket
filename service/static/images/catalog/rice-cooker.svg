@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-labelledby="title desc">
+<title id="title">Nồi cơm điện Home — minh họa</title>
+<desc id="desc">Hình minh họa do dự án tạo, không phải ảnh thật của sản phẩm RetailRocket.</desc>
+<rect width="240" height="180" rx="20" fill="#f3f5ee"/>
+<circle cx="181" cy="38" r="25" fill="#e4ebde"/>
+<circle cx="47" cy="130" r="17" fill="#ece6d4"/>
+<ellipse cx="121" cy="158" rx="77" ry="8" fill="#dce5d7"/>
+<g stroke="#34564b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M65 76h110v57q0 23-27 23H92q-27 0-27-23Z" fill="#d5deca"/><path d="M59 76q1-35 61-35t61 35Z" fill="#a9c3aa"/><path d="M102 40v-8h36v8" fill="#6c9277"/><path d="M65 91H53q-9 0-9 11t9 11h12m110-22h12q9 0 9 11t-9 11h-12" fill="none" stroke-width="5"/><rect x="95" y="101" width="50" height="34" rx="8" fill="#8da995"/><circle cx="120" cy="117" r="8" fill="#efdbab"/><path d="M88 156v4m64-4v4" stroke-width="5"/></g>
+</svg>

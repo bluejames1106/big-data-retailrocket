@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-labelledby="title desc">
+<title id="title">Tai nghe chụp tai Studio — minh họa</title>
+<desc id="desc">Hình minh họa do dự án tạo, không phải ảnh thật của sản phẩm RetailRocket.</desc>
+<rect width="240" height="180" rx="20" fill="#f3f5ee"/>
+<circle cx="181" cy="38" r="25" fill="#e4ebde"/>
+<circle cx="47" cy="130" r="17" fill="#ece6d4"/>
+<ellipse cx="121" cy="158" rx="77" ry="8" fill="#dce5d7"/>
+<g stroke="#34564b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M66 104V85q0-54 54-54t54 54v19" fill="none" stroke="#718f7e" stroke-width="15"/><path d="M66 77q4-46 54-46t54 46" fill="none" stroke="#bad0bb" stroke-width="8"/><rect x="54" y="89" width="31" height="55" rx="14" fill="#b4ceba"/><rect x="155" y="89" width="31" height="55" rx="14" fill="#b4ceba"/><path d="M79 96v39m82-39v39" stroke="#5d7e6b" stroke-width="5"/><path d="M186 113v13" stroke="#d4bd8a" stroke-width="4"/></g>
+</svg>

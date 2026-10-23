@@ -1,0 +1,39 @@
+{
+  "run_id": "strength-20261022-v1",
+  "bronze_events": 2755641,
+  "silver_events": 2755641,
+  "gold_user_item_pairs": 2145179,
+  "visitors": 1407580,
+  "items": 235061,
+  "event_counts": {
+    "addtocart": 68966,
+    "transaction": 22457,
+    "view": 2664218
+  },
+  "purchasing_visitors": 11719,
+  "distinct_transaction_ids": 17672,
+  "visitor_purchase_conversion": 0.00832563690873698,
+  "conversion_definition": "Distinct visitors with >=1 purchase event / all distinct observed visitors",
+  "ctr": null,
+  "revenue": null,
+  "average_order_value": null,
+  "unavailable_metrics_reason": "Source has no ad impressions/click attribution, price, currency or order totals",
+  "first_event_time_utc": "2015-05-03T03:00:04.384Z",
+  "last_event_time_utc": "2015-09-18T02:59:47.788Z",
+  "weights": {
+    "view": 1.0,
+    "addtocart": 3.0,
+    "transaction": 5.0,
+    "review": 0.0
+  },
+  "status": "completed",
+  "created_at": "2026-10-22T03:31:22.137531+00:00",
+  "paths": {
+    "bronze": "hdfs://namenode:8020/ecommerce/runs/full-20261022-1031/delta/bronze",
+    "silver": "hdfs://namenode:8020/ecommerce/runs/full-20261022-1031/delta/silver",
+    "gold_interactions": "hdfs://namenode:8020/ecommerce/runs/full-20261022-1031/delta/gold_interactions"
+  },
+  "source_run_id": "session-20261022-1327",
+  "source_data_run_id": "full-20261022-1031",
+  "metadata_rebinding_note": "Inherited KPI counts independently matched to bundled events.csv; only run association corrected for the strength serving snapshot."
+}

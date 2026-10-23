@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-labelledby="title desc">
+<title id="title">Áo thun Everyday — minh họa</title>
+<desc id="desc">Hình minh họa do dự án tạo, không phải ảnh thật của sản phẩm RetailRocket.</desc>
+<rect width="240" height="180" rx="20" fill="#f3f5ee"/>
+<circle cx="181" cy="38" r="25" fill="#e4ebde"/>
+<circle cx="47" cy="130" r="17" fill="#ece6d4"/>
+<ellipse cx="121" cy="158" rx="77" ry="8" fill="#dce5d7"/>
+<g stroke="#34564b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="m94 39-31 16-23 33 29 18 13-19v65h76V87l13 19 29-18-23-33-31-16q-26 20-52 0Z" fill="#b7cbb2"/><path d="M94 39q26 37 52 0" fill="none" stroke="#5e8571" stroke-width="4"/><path d="M83 78v16m74-16v16M87 143h66" fill="none" stroke="#8ca98f"/><path d="M131 83h15v17h-15Z" fill="#dce5cb"/></g>
+</svg>

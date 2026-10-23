@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-labelledby="title desc">
+<title id="title">Vở kẻ ngang Campus — minh họa</title>
+<desc id="desc">Hình minh họa do dự án tạo, không phải ảnh thật của sản phẩm RetailRocket.</desc>
+<rect width="240" height="180" rx="20" fill="#f3f5ee"/>
+<circle cx="181" cy="38" r="25" fill="#e4ebde"/>
+<circle cx="47" cy="130" r="17" fill="#ece6d4"/>
+<ellipse cx="121" cy="158" rx="77" ry="8" fill="#dce5d7"/>
+<g stroke="#34564b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><rect x="64" y="29" width="113" height="127" rx="8" fill="#f4e8c5"/><path d="M79 29v127" stroke="#c79c76"/><g stroke="#7c9c8f" stroke-width="2"><path d="M93 59h64"/><path d="M93 75h64"/><path d="M93 91h64"/><path d="M93 107h64"/><path d="M93 123h64"/></g><g fill="none" stroke-width="3"><path d="M70 47h-9q-6 0-6-5t6-5h9"/><path d="M70 64h-9q-6 0-6-5t6-5h9"/><path d="M70 81h-9q-6 0-6-5t6-5h9"/><path d="M70 98h-9q-6 0-6-5t6-5h9"/><path d="M70 115h-9q-6 0-6-5t6-5h9"/><path d="M70 132h-9q-6 0-6-5t6-5h9"/></g><rect x="119" y="33" width="41" height="8" rx="3" fill="#a8c6b1" stroke="none"/></g>
+</svg>

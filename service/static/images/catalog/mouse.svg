@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-labelledby="title desc">
+<title id="title">Chuột không dây Glide — minh họa</title>
+<desc id="desc">Hình minh họa do dự án tạo, không phải ảnh thật của sản phẩm RetailRocket.</desc>
+<rect width="240" height="180" rx="20" fill="#f3f5ee"/>
+<circle cx="181" cy="38" r="25" fill="#e4ebde"/>
+<circle cx="47" cy="130" r="17" fill="#ece6d4"/>
+<ellipse cx="121" cy="158" rx="77" ry="8" fill="#dce5d7"/>
+<g stroke="#34564b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M120 35c-31 0-49 28-49 67 0 29 17 51 49 51s49-22 49-51c0-39-18-67-49-67Z" fill="#c5dfd3"/><path d="M120 36v57M72 93h96" fill="none"/><rect x="114" y="52" width="12" height="25" rx="6" fill="#547c6c"/><path d="M83 109q-2 17 10 26" fill="none" stroke="#eef6ed" stroke-width="6"/></g>
+</svg>

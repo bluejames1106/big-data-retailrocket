@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-labelledby="title desc">
+<title id="title">Màn hình Workview 24 — minh họa</title>
+<desc id="desc">Hình minh họa do dự án tạo, không phải ảnh thật của sản phẩm RetailRocket.</desc>
+<rect width="240" height="180" rx="20" fill="#f3f5ee"/>
+<circle cx="181" cy="38" r="25" fill="#e4ebde"/>
+<circle cx="47" cy="130" r="17" fill="#ece6d4"/>
+<ellipse cx="121" cy="158" rx="77" ry="8" fill="#dce5d7"/>
+<g stroke="#34564b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><rect x="39" y="32" width="162" height="104" rx="9" fill="#345a51"/><rect x="46" y="39" width="148" height="82" rx="3" fill="#d7e6da"/><path d="m46 121 44-40 24 17 33-42 47 65Z" fill="#9bbfa9" stroke="none"/><circle cx="77" cy="61" r="11" fill="#eed59a" stroke="none"/><path d="M107 136v14H85v7h70v-7h-22v-14" fill="#a9bcb0"/><circle cx="120" cy="128" r="2" fill="#d3dfc8" stroke="none"/></g>
+</svg>

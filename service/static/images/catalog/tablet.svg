@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-labelledby="title desc">
+<title id="title">Máy tính bảng Canvas — minh họa</title>
+<desc id="desc">Hình minh họa do dự án tạo, không phải ảnh thật của sản phẩm RetailRocket.</desc>
+<rect width="240" height="180" rx="20" fill="#f3f5ee"/>
+<circle cx="181" cy="38" r="25" fill="#e4ebde"/>
+<circle cx="47" cy="130" r="17" fill="#ece6d4"/>
+<ellipse cx="121" cy="158" rx="77" ry="8" fill="#dce5d7"/>
+<g stroke="#34564b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><rect x="62" y="21" width="112" height="140" rx="12" fill="#59796c"/><rect x="69" y="28" width="98" height="121" rx="6" fill="#e6e4c9"/><path d="M70 114q43-62 97-15v44a6 6 0 0 1-6 6H75a6 6 0 0 1-6-6Z" fill="#a5c2a6" stroke="none"/><circle cx="137" cy="62" r="19" fill="#d7b98b" stroke="none"/><circle cx="118" cy="155" r="3" fill="#d8e3cd" stroke="none"/><path d="m183 40-7 100 4 10 5-9 7-100Z" fill="#d4c5a4"/></g>
+</svg>

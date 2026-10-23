@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-labelledby="title desc">
+<title id="title">Túi vải Canvas — minh họa</title>
+<desc id="desc">Hình minh họa do dự án tạo, không phải ảnh thật của sản phẩm RetailRocket.</desc>
+<rect width="240" height="180" rx="20" fill="#f3f5ee"/>
+<circle cx="181" cy="38" r="25" fill="#e4ebde"/>
+<circle cx="47" cy="130" r="17" fill="#ece6d4"/>
+<ellipse cx="121" cy="158" rx="77" ry="8" fill="#dce5d7"/>
+<g stroke="#34564b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M95 64V45q0-22 25-22t25 22v19" fill="none" stroke="#9b9d79" stroke-width="9"/><path d="M65 59h110l10 93H55Z" fill="#e0d5b5"/><path d="M65 59h110l10 93H55Z" fill="none"/><path d="M70 66v79m100-79v79" stroke="#c4b48e"/><path d="M120 97q-16-19-24 0t24 30q32-11 24-30t-24 0Z" fill="#83a68c" stroke="none"/></g>
+</svg>

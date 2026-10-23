@@ -1,0 +1,8 @@
+# Local launch override. Original ZIP compose and model files remain unchanged.
+services:
+  app:
+    image: bigdata-update2:local
+  api:
+    image: bigdata-update2:local
+  job-worker:
+    image: bigdata-update2:local

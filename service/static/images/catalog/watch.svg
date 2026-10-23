@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-labelledby="title desc">
+<title id="title">Đồng hồ Horizon — minh họa</title>
+<desc id="desc">Hình minh họa do dự án tạo, không phải ảnh thật của sản phẩm RetailRocket.</desc>
+<rect width="240" height="180" rx="20" fill="#f3f5ee"/>
+<circle cx="181" cy="38" r="25" fill="#e4ebde"/>
+<circle cx="47" cy="130" r="17" fill="#ece6d4"/>
+<ellipse cx="121" cy="158" rx="77" ry="8" fill="#dce5d7"/>
+<g stroke="#34564b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M102 21h36l5 41h-46Zm-5 97h46l-5 43h-36Z" fill="#9ab9aa"/><rect x="87" y="55" width="66" height="70" rx="23" fill="#dddfd2"/><circle cx="120" cy="90" r="27" fill="#f9f8ee"/><path d="M120 72v19l14 8" fill="none" stroke="#277764" stroke-width="4"/><circle cx="120" cy="90" r="3" fill="#277764"/><path d="M120 67v3m23 20h-3m-20 23v-3M97 90h3M153 81h4v14h-4" fill="none"/></g>
+</svg>

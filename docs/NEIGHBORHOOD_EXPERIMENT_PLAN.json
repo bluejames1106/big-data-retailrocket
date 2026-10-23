@@ -1,0 +1,66 @@
+{
+  "experiment": "neighborhood-20261022",
+  "registered_at_utc": "2026-10-22T05:28:07.102748+00:00",
+  "source_run": "full-20261022-1031",
+  "baseline_window_days": 7,
+  "primary": {
+    "cap": 1000,
+    "hash_seed": 42,
+    "unchanged": true
+  },
+  "secondary": {
+    "cap": 5000,
+    "hash_seed": 43,
+    "exclude_primary_users": true,
+    "same_test_period": true,
+    "not_used_for_selection": true
+  },
+  "model_family": "item-item cooccurrence cosine/jaccard with ALS/popularity rank fusion",
+  "fixed_graph": {
+    "max_distinct_items_per_training_user": 20,
+    "query_seed_items": 5,
+    "neighbors_per_seed": 100,
+    "shrinkage": 3,
+    "rrf_constant": 60
+  },
+  "candidate_graphs": [
+    {
+      "similarity": "cosine",
+      "min_cooccurrence": 1
+    },
+    {
+      "similarity": "cosine",
+      "min_cooccurrence": 2
+    },
+    {
+      "similarity": "jaccard",
+      "min_cooccurrence": 1
+    },
+    {
+      "similarity": "jaccard",
+      "min_cooccurrence": 2
+    }
+  ],
+  "candidate_weights": [
+    {
+      "sar": 0.5,
+      "als": 0,
+      "popularity": 0.5
+    },
+    {
+      "sar": 1,
+      "als": 0,
+      "popularity": 0
+    },
+    {
+      "sar": 0.5,
+      "als": 0.5,
+      "popularity": 0
+    }
+  ],
+  "validation": "same two chronological folds, same lowest xxhash64(int visitorid,42) 1000-user cohorts; all cold users retained",
+  "selection": "maximize minimum of three mean-validation metric ratios vs fixed popularity-7d baseline; ties by NDCG, recall, precision; baseline included",
+  "promotion_gate": "chosen configuration must strictly beat baseline on all three mean-validation metrics AND all three primary-test metrics; no alternative selection from test; otherwise retain previous active demo",
+  "uncertainty": "paired user bootstrap 95% interval, 1000 resamples, fixed seed 42; no claim of independent future-period testing",
+  "policy": "If the frozen test fails, report failure; no further tuning against this test in this experiment."
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-labelledby="title desc">
+<title id="title">Ốp lưng Soft Touch — minh họa</title>
+<desc id="desc">Hình minh họa do dự án tạo, không phải ảnh thật của sản phẩm RetailRocket.</desc>
+<rect width="240" height="180" rx="20" fill="#f3f5ee"/>
+<circle cx="181" cy="38" r="25" fill="#e4ebde"/>
+<circle cx="47" cy="130" r="17" fill="#ece6d4"/>
+<ellipse cx="121" cy="158" rx="77" ry="8" fill="#dce5d7"/>
+<g stroke="#34564b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><rect x="82" y="25" width="77" height="133" rx="17" fill="#d2b3a2"/><rect x="88" y="31" width="65" height="121" rx="12" fill="#e4cebf"/><rect x="94" y="37" width="29" height="38" rx="8" fill="#f5eee0"/><circle cx="102" cy="47" r="5" fill="#a9bdb1"/><circle cx="114" cy="63" r="5" fill="#a9bdb1"/><circle cx="123" cy="107" r="24" fill="none" stroke="#ba9384" stroke-width="3"/><path d="M123 132v9" stroke="#ba9384" stroke-width="3"/></g>
+</svg>

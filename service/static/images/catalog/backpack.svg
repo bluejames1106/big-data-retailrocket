@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-labelledby="title desc">
+<title id="title">Balo Daypack — minh họa</title>
+<desc id="desc">Hình minh họa do dự án tạo, không phải ảnh thật của sản phẩm RetailRocket.</desc>
+<rect width="240" height="180" rx="20" fill="#f3f5ee"/>
+<circle cx="181" cy="38" r="25" fill="#e4ebde"/>
+<circle cx="47" cy="130" r="17" fill="#ece6d4"/>
+<ellipse cx="121" cy="158" rx="77" ry="8" fill="#dce5d7"/>
+<g stroke="#34564b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M103 49V36q0-15 17-15t17 15v13" fill="none" stroke="#6c8d78" stroke-width="7"/><path d="M74 75q0-35 46-35t46 35v63q0 18-18 18H92q-18 0-18-18Z" fill="#b9cab0"/><path d="M82 80q38-27 76 0" fill="none" stroke="#6a8d75"/><rect x="87" y="98" width="66" height="45" rx="9" fill="#d9dec6"/><path d="M93 109h54" stroke="#7c9a82"/><path d="M141 109v9" stroke="#d8b57d" stroke-width="4"/><path d="M74 98H63v35q0 10 11 10m92-45h11v35q0 10-11 10" fill="#93ad94"/></g>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-labelledby="title desc">
+<title id="title">Giày thể thao Move — minh họa</title>
+<desc id="desc">Hình minh họa do dự án tạo, không phải ảnh thật của sản phẩm RetailRocket.</desc>
+<rect width="240" height="180" rx="20" fill="#f3f5ee"/>
+<circle cx="181" cy="38" r="25" fill="#e4ebde"/>
+<circle cx="47" cy="130" r="17" fill="#ece6d4"/>
+<ellipse cx="121" cy="158" rx="77" ry="8" fill="#dce5d7"/>
+<g stroke="#34564b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M48 86q4-17 15-24l23 24 42-22 17 24 24 22q19 7 25 18H45Z" fill="#cad6c0"/><path d="M45 128h149v15H45Z" fill="#f4eddb"/><path d="m90 85 27 25m-13-32 27 25m-13-32 27 25" stroke="#6f927a" stroke-width="4"/><path d="m52 84 29 25-8 19H45Z" fill="#a2bba1"/><path d="M164 110q17 3 28 17h-31" fill="#e6d8bb"/><path d="M59 135h16m83 0h20" stroke="#a0ad98"/></g>
+</svg>

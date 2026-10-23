@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-labelledby="title desc">
+<title id="title">Đồng hồ để bàn Round — minh họa</title>
+<desc id="desc">Hình minh họa do dự án tạo, không phải ảnh thật của sản phẩm RetailRocket.</desc>
+<rect width="240" height="180" rx="20" fill="#f3f5ee"/>
+<circle cx="181" cy="38" r="25" fill="#e4ebde"/>
+<circle cx="47" cy="130" r="17" fill="#ece6d4"/>
+<ellipse cx="121" cy="158" rx="77" ry="8" fill="#dce5d7"/>
+<g stroke="#34564b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="m80 128-12 24m92-24 12 24" fill="none" stroke="#819c83" stroke-width="7"/><circle cx="120" cy="88" r="58" fill="#a9c3a8"/><circle cx="120" cy="88" r="48" fill="#f2eddb"/><path d="M120 54v6m34 28h-6m-28 34v-6m-34-28h6" stroke="#9aab90" stroke-width="3"/><path d="M120 63v25l19 12" fill="none" stroke="#537f66" stroke-width="5"/><circle cx="120" cy="88" r="4" fill="#d8b98a"/></g>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-labelledby="title desc">
+<title id="title">Sách Những điều hay — minh họa</title>
+<desc id="desc">Hình minh họa do dự án tạo, không phải ảnh thật của sản phẩm RetailRocket.</desc>
+<rect width="240" height="180" rx="20" fill="#f3f5ee"/>
+<circle cx="181" cy="38" r="25" fill="#e4ebde"/>
+<circle cx="47" cy="130" r="17" fill="#ece6d4"/>
+<ellipse cx="121" cy="158" rx="77" ry="8" fill="#dce5d7"/>
+<g stroke="#34564b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="m70 36 94-8a10 10 0 0 1 11 10v112l-105 8Z" fill="#79a793"/><path d="M70 36v122q-13-2-13-13V48q0-10 13-12Z" fill="#477765"/><path d="m74 142 101-7v15l-101 8q-8-1-8-8t8-8Z" fill="#f9f3df"/><path d="m91 61 54-4M91 72l42-3" stroke="#e8f0db" stroke-width="4"/><path d="m113 94 12 9-4 15-14-1-5-14Z" fill="#e5c47f" stroke="none"/><path d="m160 135-4-19-9 1 2 20" fill="#d4a16d"/></g>
+</svg>

@@ -1,0 +1,140 @@
+{
+  "protocol": "all distinct new items from query time through remaining session",
+  "scope": "Previously viewed final time window; strength fusion frozen on two validation folds.",
+  "source_cohort_sha256": "1e69e0d8dd0b2b3148cda4f0bc2d6f705faa9c68ecf2eedd42b13dda864db92e",
+  "population": {
+    "active_sessions": 274857,
+    "eligible_sessions": 38945,
+    "sampled_queries": 5000,
+    "ineligible_sessions": 235912,
+    "first_timestamp_groups_without_context": 274834,
+    "repeated_events_before_first_query": 29209,
+    "unique_visitors": 4759,
+    "sampling_uses_predictions_or_target_identity": false
+  },
+  "labels": {
+    "queries": 5000,
+    "total_future_distinct_items": 10279,
+    "labels_per_query": {
+      "1": 3224,
+      "2": 872,
+      "3": 368,
+      "4": 168,
+      "5": 94,
+      "6": 63,
+      "7": 48,
+      "8": 33,
+      "9": 24,
+      "10": 26,
+      "11": 13,
+      "12": 7,
+      "13": 9,
+      "14": 9,
+      "15": 6,
+      "16": 4,
+      "17": 1,
+      "18": 4,
+      "19": 1,
+      "20": 2,
+      "21": 4,
+      "23": 1,
+      "25": 1,
+      "26": 1,
+      "27": 2,
+      "28": 5,
+      "30": 2,
+      "31": 2,
+      "35": 1,
+      "36": 1,
+      "46": 1,
+      "50": 1,
+      "73": 1,
+      "125": 1
+    },
+    "queries_with_multiple_labels": 1776,
+    "maximum_labels": 125
+  },
+  "selected_configuration": {
+    "name": "strength_0.25_0.5",
+    "transition_weight": 0.25,
+    "power": 0.5
+  },
+  "transition_profile": {
+    "pairs": 395962,
+    "observed_transitions": 503721,
+    "seeds": 95512,
+    "limit": 100,
+    "cutoff": 1440538554824
+  },
+  "baseline": {
+    "k": 10,
+    "queries": 5000,
+    "precision_at_k": 0.041159999999998885,
+    "recall_at_k": 0.280808727858557,
+    "ndcg_at_k": 0.19325337724139663,
+    "total_hits": 2058,
+    "hit_queries": 1716,
+    "recommendation_coverage": 1.0
+  },
+  "candidate": {
+    "k": 10,
+    "queries": 5000,
+    "precision_at_k": 0.04147999999999887,
+    "recall_at_k": 0.28280343204326125,
+    "ndcg_at_k": 0.1970410626949909,
+    "total_hits": 2074,
+    "hit_queries": 1731,
+    "recommendation_coverage": 1.0
+  },
+  "next_item": {
+    "baseline": {
+      "k": 10,
+      "queries": 5000,
+      "precision_at_k": 0.03003999999999915,
+      "recall_at_k": 0.3004,
+      "ndcg_at_k": 0.192074141163156,
+      "total_hits": 1502,
+      "hit_queries": 1502,
+      "recommendation_coverage": 1.0
+    },
+    "candidate": {
+      "k": 10,
+      "queries": 5000,
+      "precision_at_k": 0.03021999999999914,
+      "recall_at_k": 0.3022,
+      "ndcg_at_k": 0.19547928943577134,
+      "total_hits": 1511,
+      "hit_queries": 1511,
+      "recommendation_coverage": 1.0
+    }
+  },
+  "paired_visitor_cluster_bootstrap_95": {
+    "unit": "visitor clusters; query-weighted macro metrics",
+    "visitors": 4759,
+    "iterations": 1000,
+    "metrics": {
+      "precision_at_k": {
+        "mean_difference": 0.00032,
+        "percentile_95_interval": [
+          -9.95465731984685e-05,
+          0.0007779811396991927
+        ]
+      },
+      "recall_at_k": {
+        "mean_difference": 0.0019947041847041846,
+        "percentile_95_interval": [
+          -0.0008569103584123111,
+          0.005059026103569374
+        ]
+      },
+      "ndcg_at_k": {
+        "mean_difference": 0.0037876854535943407,
+        "percentile_95_interval": [
+          0.0017661611070863322,
+          0.005701019196446659
+        ]
+      }
+    }
+  },
+  "test_reuse_disclosure": "Historical test was already viewed; future-period evidence is still needed."
+}

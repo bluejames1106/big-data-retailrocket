@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-labelledby="title desc">
+<title id="title">iPhone mẫu Studio — minh họa</title>
+<desc id="desc">Hình minh họa do dự án tạo, không phải ảnh thật của sản phẩm RetailRocket.</desc>
+<rect width="240" height="180" rx="20" fill="#f3f5ee"/>
+<circle cx="181" cy="38" r="25" fill="#e4ebde"/>
+<circle cx="47" cy="130" r="17" fill="#ece6d4"/>
+<ellipse cx="121" cy="158" rx="77" ry="8" fill="#dce5d7"/>
+<g stroke="#34564b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><rect x="77" y="25" width="79" height="132" rx="15" fill="#b0bcd0"/><rect x="85" y="33" width="39" height="42" rx="11" fill="#cfd8e7"/><g fill="#425a6e"><circle cx="96" cy="45" r="7"/><circle cx="112" cy="63" r="7"/><circle cx="95" cy="64" r="6"/></g><circle cx="113" cy="44" r="3" fill="#f5edc9"/><path d="m120 93 10 6v12l-10 6-10-6V99Z" fill="#dce3eb" stroke="none"/><path d="M156 57h3v18h-3M74 51h3v13h-3" fill="#8796b4"/></g>
+</svg>
