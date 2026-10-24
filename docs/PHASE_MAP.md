@@ -1,5 +1,11 @@
 # Đối chiếu ActionPlan: Phase 1–7, task 1–25
 
+**Ghi chú phiên bản 24/10/2026:** bảng dưới ánh xạ pipeline ban đầu, gồm nhánh
+ALS đáp ứng task 16–18. Snapshot demo hiện chọn `strength-20261022-v1`, dùng
+conditional item-item + chuyển tiếp, không phải ALS. Airflow/runner ALS không
+tự huấn luyện graph strength. Xem [kiến trúc hiện tại](ARCHITECTURE.md),
+[kiểm tra ZIP](ZIP_DEMO_VERIFICATION.md) và [ví dụ thật](REAL_DATA_EXAMPLE.md).
+
 Tài liệu này ánh xạ yêu cầu của ActionPlan sang **mã nguồn trong gói thống nhất**.
 Việc có mã không đồng nghĩa đã chạy thành công. Kết quả thực tế phải đối chiếu
 `outputs/evidence/` và `outputs/runs/<run_id>/metrics/` của lần chạy tương ứng.

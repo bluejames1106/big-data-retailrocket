@@ -1,0 +1,446 @@
+{
+  "status": "passed",
+  "selection": "Previously used successful example, selected for explanation; not representative.",
+  "source_csv_sha256": "3745aa83238b1e6d44d8fda209807899f420084398f94ddf745f3cbcfecbf9e7",
+  "raw_rows": 2756101,
+  "clean_rows": 2755641,
+  "source_events": [
+    {
+      "source_line": 1206214,
+      "timestamp": "1441329333729",
+      "visitorid": "1000484",
+      "event": "view",
+      "itemid": "129960",
+      "transactionid": ""
+    },
+    {
+      "source_line": 1206017,
+      "timestamp": "1441329395000",
+      "visitorid": "1000484",
+      "event": "view",
+      "itemid": "75643",
+      "transactionid": ""
+    }
+  ],
+  "query": {
+    "query_id": "1000484:1441329333729",
+    "visitorid": 1000484,
+    "actual": [
+      75643
+    ],
+    "seen": [
+      129960
+    ],
+    "context": [
+      {
+        "itemid": 129960,
+        "event": "view",
+        "timestamp": 1441329333729
+      }
+    ],
+    "as_of": 1441329394999,
+    "target_timestamp": 1441329395000
+  },
+  "configuration": {
+    "name": "strength_0.25_0.5",
+    "graph": "binary_user",
+    "binary_similarity": "conditional",
+    "shrinkage": 3,
+    "event_weights": {
+      "view": 1,
+      "addtocart": 1,
+      "transaction": 1
+    },
+    "query_half_life_minutes": null,
+    "position_decay": 0.8,
+    "seed_limit": 5,
+    "popularity_weight": 0,
+    "transition_weight": 0.25,
+    "fusion": "strength",
+    "strength_power": 0.5
+  },
+  "cohort_sha256": "1e69e0d8dd0b2b3148cda4f0bc2d6f705faa9c68ecf2eedd42b13dda864db92e",
+  "cohort_population": {
+    "active_sessions": 274857,
+    "eligible_sessions": 38945,
+    "sampled_queries": 5000,
+    "ineligible_sessions": 235912,
+    "first_timestamp_groups_without_context": 274834,
+    "repeated_events_before_first_query": 29209,
+    "unique_visitors": 4759,
+    "sampling_uses_predictions_or_target_identity": false
+  },
+  "historical_graph": {
+    "graph": "binary_user",
+    "train_end_inclusive": 1440538554824,
+    "input_events": 2341051,
+    "entity_item_pairs_before_cap": 1819323,
+    "entity_item_pairs_after_cap": 1731513,
+    "entities": 1194064,
+    "catalog_items": 214005,
+    "half_life_days": null,
+    "max_items_per_entity": 20,
+    "neighbor_limit": 100,
+    "binary_similarity": "conditional",
+    "shrinkage": 3
+  },
+  "visitor_training_events": 0,
+  "historical_ranking": [
+    {
+      "rank": 1,
+      "itemid": 238677,
+      "score": 0.9276309271789385,
+      "relevant": false,
+      "terms": [
+        {
+          "seed": 129960,
+          "affinity": 1.0,
+          "seed_users_after_cap": 58,
+          "candidate_users_after_cap": 26,
+          "both_users_after_cap": 6,
+          "co_score": 0.06896551724137931,
+          "transition_count": 3,
+          "max_co_score": 0.08448275862068966,
+          "max_transition_count": 3,
+          "co_contribution": 0.6776309271789385,
+          "transition_contribution": 0.25
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "itemid": 336437,
+      "score": 0.8943375672974064,
+      "relevant": false,
+      "terms": [
+        {
+          "seed": 129960,
+          "affinity": 1.0,
+          "seed_users_after_cap": 58,
+          "candidate_users_after_cap": 36,
+          "both_users_after_cap": 7,
+          "co_score": 0.08448275862068966,
+          "transition_count": 1,
+          "max_co_score": 0.08448275862068966,
+          "max_transition_count": 3,
+          "co_contribution": 0.75,
+          "transition_contribution": 0.14433756729740643
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "itemid": 375846,
+      "score": 0.7432843469848501,
+      "relevant": false,
+      "terms": [
+        {
+          "seed": 129960,
+          "affinity": 1.0,
+          "seed_users_after_cap": 58,
+          "candidate_users_after_cap": 16,
+          "both_users_after_cap": 5,
+          "co_score": 0.05387931034482759,
+          "transition_count": 1,
+          "max_co_score": 0.08448275862068966,
+          "max_transition_count": 3,
+          "co_contribution": 0.5989467796874437,
+          "transition_contribution": 0.14433756729740643
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "itemid": 382552,
+      "score": 0.7163649778038146,
+      "relevant": false,
+      "terms": [
+        {
+          "seed": 129960,
+          "affinity": 1.0,
+          "seed_users_after_cap": 58,
+          "candidate_users_after_cap": 12,
+          "both_users_after_cap": 4,
+          "co_score": 0.03940886699507389,
+          "transition_count": 2,
+          "max_co_score": 0.08448275862068966,
+          "max_transition_count": 3,
+          "co_contribution": 0.512240832571883,
+          "transition_contribution": 0.2041241452319315
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "itemid": 35403,
+      "score": 0.6565783998692895,
+      "relevant": false,
+      "terms": [
+        {
+          "seed": 129960,
+          "affinity": 1.0,
+          "seed_users_after_cap": 58,
+          "candidate_users_after_cap": 24,
+          "both_users_after_cap": 4,
+          "co_score": 0.03940886699507389,
+          "transition_count": 1,
+          "max_co_score": 0.08448275862068966,
+          "max_transition_count": 3,
+          "co_contribution": 0.512240832571883,
+          "transition_contribution": 0.14433756729740643
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "itemid": 323328,
+      "score": 0.6565783998692895,
+      "relevant": false,
+      "terms": [
+        {
+          "seed": 129960,
+          "affinity": 1.0,
+          "seed_users_after_cap": 58,
+          "candidate_users_after_cap": 33,
+          "both_users_after_cap": 4,
+          "co_score": 0.03940886699507389,
+          "transition_count": 1,
+          "max_co_score": 0.08448275862068966,
+          "max_transition_count": 3,
+          "co_contribution": 0.512240832571883,
+          "transition_contribution": 0.14433756729740643
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "itemid": 191049,
+      "score": 0.6190866466112976,
+      "relevant": false,
+      "terms": [
+        {
+          "seed": 129960,
+          "affinity": 1.0,
+          "seed_users_after_cap": 58,
+          "candidate_users_after_cap": 101,
+          "both_users_after_cap": 3,
+          "co_score": 0.02586206896551724,
+          "transition_count": 2,
+          "max_co_score": 0.08448275862068966,
+          "max_transition_count": 3,
+          "co_contribution": 0.41496250137936613,
+          "transition_contribution": 0.2041241452319315
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "itemid": 322051,
+      "score": 0.6190866466112976,
+      "relevant": false,
+      "terms": [
+        {
+          "seed": 129960,
+          "affinity": 1.0,
+          "seed_users_after_cap": 58,
+          "candidate_users_after_cap": 33,
+          "both_users_after_cap": 3,
+          "co_score": 0.02586206896551724,
+          "transition_count": 2,
+          "max_co_score": 0.08448275862068966,
+          "max_transition_count": 3,
+          "co_contribution": 0.41496250137936613,
+          "transition_contribution": 0.2041241452319315
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "itemid": 75643,
+      "score": 0.5989467796874437,
+      "relevant": true,
+      "terms": [
+        {
+          "seed": 129960,
+          "affinity": 1.0,
+          "seed_users_after_cap": 58,
+          "candidate_users_after_cap": 16,
+          "both_users_after_cap": 5,
+          "co_score": 0.05387931034482759,
+          "transition_count": 0.0,
+          "max_co_score": 0.08448275862068966,
+          "max_transition_count": 3,
+          "co_contribution": 0.5989467796874437,
+          "transition_contribution": 0.0
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "itemid": 313931,
+      "score": 0.5989467796874437,
+      "relevant": false,
+      "terms": [
+        {
+          "seed": 129960,
+          "affinity": 1.0,
+          "seed_users_after_cap": 58,
+          "candidate_users_after_cap": 34,
+          "both_users_after_cap": 5,
+          "co_score": 0.05387931034482759,
+          "transition_count": 0.0,
+          "max_co_score": 0.08448275862068966,
+          "max_transition_count": 3,
+          "co_contribution": 0.5989467796874437,
+          "transition_contribution": 0.0
+        }
+      ]
+    }
+  ],
+  "example_metrics": {
+    "precision_at_k": 0.1,
+    "recall_at_k": 1.0,
+    "ndcg_at_k": 0.3010299956639812
+  },
+  "previous_rrf_ids": [
+    238677,
+    336437,
+    35403,
+    382552,
+    375846,
+    191049,
+    323328,
+    322051,
+    61840,
+    278586
+  ],
+  "popularity_ids": [
+    187946,
+    219512,
+    384302,
+    461686,
+    190000,
+    66752,
+    215715,
+    441668,
+    65273,
+    320130
+  ],
+  "popularity_example_metrics": {
+    "precision_at_k": 0.0,
+    "recall_at_k": 0.0,
+    "ndcg_at_k": 0.0
+  },
+  "served_full_history": {
+    "run_id": "strength-20261022-v1",
+    "anonymous": {
+      "items": [
+        {
+          "itemid": 238677,
+          "score": 0.9276309271789385
+        },
+        {
+          "itemid": 336437,
+          "score": 0.8943375672974064
+        },
+        {
+          "itemid": 75643,
+          "score": 0.8219684944763449
+        },
+        {
+          "itemid": 407489,
+          "score": 0.8219684944763449
+        },
+        {
+          "itemid": 375846,
+          "score": 0.7432843469848501
+        },
+        {
+          "itemid": 382552,
+          "score": 0.7163649778038146
+        },
+        {
+          "itemid": 35403,
+          "score": 0.6565783998692895
+        },
+        {
+          "itemid": 323328,
+          "score": 0.6565783998692895
+        },
+        {
+          "itemid": 191049,
+          "score": 0.6190866466112976
+        },
+        {
+          "itemid": 322051,
+          "score": 0.6190866466112976
+        }
+      ],
+      "context_items": 1,
+      "matched_seeds": 2,
+      "source": "session_strength_fusion"
+    },
+    "known_visitor_seen_ids": [
+      75643,
+      129960
+    ],
+    "known_visitor": {
+      "items": [
+        {
+          "itemid": 238677,
+          "score": 0.9276309271789385
+        },
+        {
+          "itemid": 336437,
+          "score": 0.8943375672974064
+        },
+        {
+          "itemid": 407489,
+          "score": 0.8219684944763449
+        },
+        {
+          "itemid": 375846,
+          "score": 0.7432843469848501
+        },
+        {
+          "itemid": 382552,
+          "score": 0.7163649778038146
+        },
+        {
+          "itemid": 35403,
+          "score": 0.6565783998692895
+        },
+        {
+          "itemid": 323328,
+          "score": 0.6565783998692895
+        },
+        {
+          "itemid": 191049,
+          "score": 0.6190866466112976
+        },
+        {
+          "itemid": 322051,
+          "score": 0.6190866466112976
+        },
+        {
+          "itemid": 313931,
+          "score": 0.5989467796874437
+        }
+      ],
+      "context_items": 1,
+      "matched_seeds": 2,
+      "source": "session_strength_fusion"
+    },
+    "scope": "Inference illustration only; graph includes historical targets."
+  },
+  "unchanged_serving": true,
+  "checks": {
+    "source_hash": true,
+    "frozen_cohort_hash": true,
+    "strictly_past_context": true,
+    "graph_before_cutoff": true,
+    "no_seen_or_duplicate_ids": true,
+    "score_decomposition_matches": true,
+    "context_found_in_raw_csv": true
+  }
+}

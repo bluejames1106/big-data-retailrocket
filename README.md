@@ -30,6 +30,14 @@ powershell -NoProfile -ExecutionPolicy Bypass -File scripts\run_local_update2_de
 
 Lần đầu cần Internet để dựng Docker image. Các lần sau, khi mã nguồn không đổi, có thể thêm `-SkipBuild`. Demo dùng snapshot sẵn có, không phải huấn luyện lại. Xem [hướng dẫn cửa hàng](docs/STOREFRONT_DEMO.md) và [hướng dẫn demo cục bộ](LOCAL_DEMO.md).
 
+## Tài liệu để báo cáo
+
+- [Kiến trúc hiện tại](docs/ARCHITECTURE.md): tách pipeline Kafka/Spark khỏi luồng phục vụ graph theo phiên; nêu đúng cấu hình 1/1/1 và công thức strength 75/25.
+- [Ví dụ dữ liệu thật và lời trình bày mẫu](docs/REAL_DATA_EXAMPLE.md): user 1000484, ID 129960 → 75643; dự đoán lịch sử xếp thứ 9, graph full trên dashboard xếp thứ 3.
+- [Kiểm tra chạy ZIP ngày 24/10/2026](docs/ZIP_DEMO_VERIFICATION.md): tải Release, giải nén riêng, volume mới, 76 kiểm thử và 100 yêu cầu HTTP thành công.
+
+Các tài liệu cập nhật nằm trên nhánh `main`. ZIP `storefront-v2` giữ snapshot runtime đã kiểm tra; tài liệu cũ bên trong ZIP có thể mô tả các nhánh ALS/thí nghiệm trước. Khi báo cáo kiến trúc hiện tại, dùng các liên kết ở trên.
+
 ## Thử các chức năng
 
 - **Xem**: mở chi tiết và ghi một lượt xem mô phỏng.

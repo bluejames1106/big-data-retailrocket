@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "source_url": "https://github.com/bluejames1106/big-data-retailrocket/releases/download/storefront-v2/big_data_update_2_storefront_v2.zip",
+  "archive_sha256": "0bcab83532482f9934078c525c2be51eb44ded50aae1a8f2f8fc2e0a41f74fa9",
+  "archive_bytes": 66691379,
+  "verified_payloads": 191,
+  "fresh_extraction": true,
+  "all_payload_hashes_match": true,
+  "project_directory": "D:\\BIGDATA\\zip-check-20261024\\big_data_update_2"
+}

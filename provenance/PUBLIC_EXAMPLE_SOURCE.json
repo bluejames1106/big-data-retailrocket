@@ -1,0 +1,19 @@
+{
+  "checked_on": "2026-10-24",
+  "purpose": "Source attribution for the two-row report example explicitly requested by the project owner",
+  "repository": "https://github.com/bluejames1106/big-data-retailrocket",
+  "repository_visibility_at_check": "public",
+  "dataset": "Retailrocket recommender system dataset",
+  "publisher": "Retailrocket on Kaggle",
+  "source_page": "https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset",
+  "license": "CC BY-NC-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "source_data_card_statement": "all values are hashed due to confidential issues",
+  "source_schema": ["timestamp", "visitorid", "event", "itemid", "transactionid"],
+  "contains_names_emails_ips_or_project_customer_accounts": false,
+  "source_csv_sha256": "3745aa83238b1e6d44d8fda209807899f420084398f94ddf745f3cbcfecbf9e7",
+  "existing_public_release": "https://github.com/bluejames1106/big-data-retailrocket/releases/tag/storefront-v2",
+  "release_downloaded_without_authentication_and_hash_verified": true,
+  "example_changes": ["Select the two existing public source rows for visitor 1000484", "Add source_line", "Sort chronologically", "Calculate model scores separately"],
+  "scope": "Public research dataset excerpt; not private browsing history collected from the project owner or website visitors"
+}

@@ -1,5 +1,10 @@
 # Kết quả cải thiện mô hình ngày 22/10/2026
 
+> **Báo cáo lịch sử của nhánh ALS/hybrid**, không mô tả snapshot đang chọn.
+> Các câu “demo hiện tại”, đường dẫn và lệnh bên dưới thuộc thời điểm thí nghiệm
+> này. Để chạy bản strength hiện nay, xem [README](../README.md),
+> [kiến trúc hiện tại](ARCHITECTURE.md) và [kiểm tra ZIP](ZIP_DEMO_VERIFICATION.md).
+
 Run **hybrid-20261022-1207** đã completed; demo/API/registry/seen-filter đã được kiểm tra thật và passed. Đây là bản cập nhật sau full-20261022-1031; bản cũ được giữ nguyên.
 
 ## Chỉ số thế nào là ổn?

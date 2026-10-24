@@ -1,0 +1,77 @@
+test_canonical_hash_ignores_prediction_and_row_order_only (test_session_audit.SessionAuditTests.test_canonical_hash_ignores_prediction_and_row_order_only) ... ok
+test_duplicates_seen_targets_and_missing_shared_context_rejected (test_session_audit.SessionAuditTests.test_duplicates_seen_targets_and_missing_shared_context_rejected) ... ok
+test_full_audit_preserves_protocols_and_reference (test_session_audit.SessionAuditTests.test_full_audit_preserves_protocols_and_reference) ... ok
+test_future_context_and_equal_target_time_are_rejected (test_session_audit.SessionAuditTests.test_future_context_and_equal_target_time_are_rejected) ... ok
+test_graph_cutoff_must_precede_inference_time (test_session_audit.SessionAuditTests.test_graph_cutoff_must_precede_inference_time) ... ok
+test_late_plan_and_early_evaluation_rejected (test_session_audit.SessionAuditTests.test_late_plan_and_early_evaluation_rejected) ... ok
+test_macro_denominator_keeps_misses_and_all_three_models (test_session_audit.SessionAuditTests.test_macro_denominator_keeps_misses_and_all_three_models) ... ok
+test_policy_changes_after_freeze_rejected (test_session_audit.SessionAuditTests.test_policy_changes_after_freeze_rejected) ... ok
+test_promotion_requires_improvement_on_every_validation_metric (test_session_audit.SessionAuditTests.test_promotion_requires_improvement_on_every_validation_metric) ... ok
+test_query_id_collision_rejected (test_session_audit.SessionAuditTests.test_query_id_collision_rejected) ... ok
+test_session_requires_one_target_and_past_context (test_session_audit.SessionAuditTests.test_session_requires_one_target_and_past_context) ... ok
+test_static_macro_recall_is_not_session_recall (test_session_audit.SessionAuditTests.test_static_macro_recall_is_not_session_recall) ... ok
+test_static_reference_changes_cannot_hide_behind_new_cohort_hash (test_session_audit.SessionAuditTests.test_static_reference_changes_cannot_hide_behind_new_cohort_hash) ... ok
+test_validation_cannot_use_later_than_final_training_period (test_session_audit.SessionAuditTests.test_validation_cannot_use_later_than_final_training_period) ... ok
+test_validation_mean_tampering_rejected (test_session_audit.SessionAuditTests.test_validation_mean_tampering_rejected) ... ok
+test_winner_must_follow_ndcg_then_recall_precision_name_rule (test_session_audit.SessionAuditTests.test_winner_must_follow_ndcg_then_recall_precision_name_rule) ... ok
+test_wrong_metric_or_hash_is_rejected (test_session_audit.SessionAuditTests.test_wrong_metric_or_hash_is_rejected) ... ok
+test_zero_hits_and_regression_are_valid_outcomes (test_session_audit.SessionAuditTests.test_zero_hits_and_regression_are_valid_outcomes) ... ok
+test_equal_hit_totals_with_roundoff_are_not_improvement (test_session_gate.SessionGateTests.test_equal_hit_totals_with_roundoff_are_not_improvement) ... ok
+test_every_metric_must_improve (test_session_gate.SessionGateTests.test_every_metric_must_improve) ... ok
+test_cart_and_purchase_intent_change_candidate_order (test_session_model.SessionModelTests.test_cart_and_purchase_intent_change_candidate_order) ... ok
+test_duplicate_events_do_not_accumulate_unbounded_strength (test_session_model.SessionModelTests.test_duplicate_events_do_not_accumulate_unbounded_strength) ... ok
+test_future_events_are_rejected_in_both_inference_entry_points (test_session_model.SessionModelTests.test_future_events_are_rejected_in_both_inference_entry_points) ... ok
+test_same_item_uses_max_event_strength_and_latest_timestamp (test_session_model.SessionModelTests.test_same_item_uses_max_event_strength_and_latest_timestamp) ... ok
+test_seed_limit_uses_latest_distinct_items_with_deterministic_ties (test_session_model.SessionModelTests.test_seed_limit_uses_latest_distinct_items_with_deterministic_ties) ... ok
+test_seen_filter_covers_context_and_explicit_history_and_fallback (test_session_model.SessionModelTests.test_seen_filter_covers_context_and_explicit_history_and_fallback) ... ok
+test_sqlite_http_helper_matches_in_memory_offline_ranker (test_session_model.SessionModelTests.test_sqlite_http_helper_matches_in_memory_offline_ranker) ... ok
+test_time_decay_changes_rank_with_no_position_or_intent_change (test_session_model.SessionModelTests.test_time_decay_changes_rank_with_no_position_or_intent_change) ... ok
+test_unmatched_context_falls_back_without_seen_or_duplicate_items (test_session_model.SessionModelTests.test_unmatched_context_falls_back_without_seen_or_duplicate_items) ... ok
+test_existing_next_item_must_remain_in_future_labels (test_session_multilabel.MultiLabelSessionTests.test_existing_next_item_must_remain_in_future_labels) ... ok
+test_future_labels_include_same_time_targets_and_later_new_items (test_session_multilabel.MultiLabelSessionTests.test_future_labels_include_same_time_targets_and_later_new_items) ... ok
+test_context_and_known_user_history_are_both_excluded (test_session_service.SessionServiceTests.test_context_and_known_user_history_are_both_excluded) ... ok
+test_contexts_are_independent_and_empty_context_is_explicit_fallback (test_session_service.SessionServiceTests.test_contexts_are_independent_and_empty_context_is_explicit_fallback) ... ok
+test_http_roundtrip_uses_real_graph_and_distinct_versions (test_session_service.SessionServiceTests.test_http_roundtrip_uses_real_graph_and_distinct_versions) ... ok
+test_malformed_schema_and_traversal_refused (test_session_service.SessionServiceTests.test_malformed_schema_and_traversal_refused) ... ok
+test_metrics_are_separate_and_do_not_overwrite_static_evaluation (test_session_service.SessionServiceTests.test_metrics_are_separate_and_do_not_overwrite_static_evaluation) ... ok
+test_missing_index_refuses_session_but_keeps_static_model_available (test_session_service.SessionServiceTests.test_missing_index_refuses_session_but_keeps_static_model_available) ... ok
+test_old_bundle_without_session_is_still_servable (test_session_service.SessionServiceTests.test_old_bundle_without_session_is_still_servable) ... ok
+test_omitted_timestamp_uses_server_clock_and_event_types_are_supported (test_session_service.SessionServiceTests.test_omitted_timestamp_uses_server_clock_and_event_types_are_supported) ... ok
+test_rejects_future_invalid_and_unbounded_payloads (test_session_service.SessionServiceTests.test_rejects_future_invalid_and_unbounded_payloads) ... ok
+test_session_filters_full_sqlite_history_for_user_outside_exported_cache (test_session_service.SessionServiceTests.test_session_filters_full_sqlite_history_for_user_outside_exported_cache) ... ok
+test_session_reads_canonical_online_history_without_cross_run_leakage (test_session_service.SessionServiceTests.test_session_reads_canonical_online_history_without_cross_run_leakage) ... ok
+test_cold_catalog_targets_are_retained (test_session_training.SessionCohortTests.test_cold_catalog_targets_are_retained) ... ok
+test_coverage_reports_sessions_without_eligible_context_and_target (test_session_training.SessionCohortTests.test_coverage_reports_sessions_without_eligible_context_and_target) ... ok
+test_first_new_target_skips_repeats_and_excludes_later_events (test_session_training.SessionCohortTests.test_first_new_target_skips_repeats_and_excludes_later_events) ... ok
+test_period_end_and_global_cutoff_are_respected (test_session_training.SessionCohortTests.test_period_end_and_global_cutoff_are_respected) ... ok
+test_sampling_uses_session_keys_and_is_independent_of_input_order_and_target_ids (test_session_training.SessionCohortTests.test_sampling_uses_session_keys_and_is_independent_of_input_order_and_target_ids) ... ok
+test_simultaneous_events_are_never_each_others_past_context (test_session_training.SessionCohortTests.test_simultaneous_events_are_never_each_others_past_context) ... ok
+test_thirty_minute_gap_is_inclusive_and_larger_gap_starts_new_context (test_session_training.SessionCohortTests.test_thirty_minute_gap_is_inclusive_and_larger_gap_starts_new_context) ... ok
+FIT {"graph": "binary_user", "train_end_inclusive": 30, "input_events": 24, "entity_item_pairs_before_cap": 24, "entity_item_pairs_after_cap": 22, "entities": 2, "catalog_items": 22, "half_life_days": null, "max_items_per_entity": 20, "neighbor_limit": 100, "binary_similarity": "jaccard", "shrinkage": 3}
+test_binary_graph_caps_latest_twenty_distinct_pairs_per_visitor (test_session_training.SparseTrainingTests.test_binary_graph_caps_latest_twenty_distinct_pairs_per_visitor) ... ok
+FIT {"graph": "binary_user", "train_end_inclusive": 10, "input_events": 7, "entity_item_pairs_before_cap": 7, "entity_item_pairs_after_cap": 7, "entities": 4, "catalog_items": 3, "half_life_days": null, "max_items_per_entity": 20, "neighbor_limit": 100, "binary_similarity": "jaccard", "shrinkage": 3}
+test_binary_graph_matches_exact_jaccard_shrinkage_counts (test_session_training.SparseTrainingTests.test_binary_graph_matches_exact_jaccard_shrinkage_counts) ... ok
+FIT {"graph": "binary_user", "train_end_inclusive": 100, "input_events": 21, "entity_item_pairs_before_cap": 21, "entity_item_pairs_after_cap": 20, "entities": 1, "catalog_items": 20, "half_life_days": null, "max_items_per_entity": 20, "neighbor_limit": 100, "binary_similarity": "jaccard", "shrinkage": 3}
+test_cap_breaks_equal_timestamp_ties_by_ascending_item_id (test_session_training.SparseTrainingTests.test_cap_breaks_equal_timestamp_ties_by_ascending_item_id) ... ok
+FIT {"graph": "binary_user", "train_end_inclusive": 100, "input_events": 5, "entity_item_pairs_before_cap": 5, "entity_item_pairs_after_cap": 5, "entities": 3, "catalog_items": 3, "half_life_days": null, "max_items_per_entity": 20, "neighbor_limit": 100, "binary_similarity": "jaccard", "shrinkage": 3}
+FIT {"graph": "binary_user", "train_end_inclusive": 100, "input_events": 5, "entity_item_pairs_before_cap": 5, "entity_item_pairs_after_cap": 5, "entities": 3, "catalog_items": 3, "half_life_days": null, "max_items_per_entity": 20, "neighbor_limit": 100, "binary_similarity": "jaccard", "shrinkage": 3}
+FIT {"graph": "weighted_user", "train_end_inclusive": 100, "input_events": 5, "entity_item_pairs_before_cap": 5, "entity_item_pairs_after_cap": 5, "entities": 3, "catalog_items": 3, "half_life_days": 30, "max_items_per_entity": 20, "neighbor_limit": 100, "binary_similarity": "jaccard", "shrinkage": 3}
+FIT {"graph": "weighted_user", "train_end_inclusive": 100, "input_events": 5, "entity_item_pairs_before_cap": 5, "entity_item_pairs_after_cap": 5, "entities": 3, "catalog_items": 3, "half_life_days": 30, "max_items_per_entity": 20, "neighbor_limit": 100, "binary_similarity": "jaccard", "shrinkage": 3}
+FIT {"graph": "weighted_session", "train_end_inclusive": 100, "input_events": 5, "entity_item_pairs_before_cap": 5, "entity_item_pairs_after_cap": 5, "entities": 3, "catalog_items": 3, "half_life_days": 30, "max_items_per_entity": 20, "neighbor_limit": 100, "binary_similarity": "jaccard", "shrinkage": 3}
+FIT {"graph": "weighted_session", "train_end_inclusive": 100, "input_events": 5, "entity_item_pairs_before_cap": 5, "entity_item_pairs_after_cap": 5, "entities": 3, "catalog_items": 3, "half_life_days": 30, "max_items_per_entity": 20, "neighbor_limit": 100, "binary_similarity": "jaccard", "shrinkage": 3}
+test_future_events_do_not_change_any_graph_or_catalog (test_session_training.SparseTrainingTests.test_future_events_do_not_change_any_graph_or_catalog) ... ok
+FIT {"graph": "weighted_user", "train_end_inclusive": 3000000, "input_events": 4, "entity_item_pairs_before_cap": 4, "entity_item_pairs_after_cap": 4, "entities": 1, "catalog_items": 4, "half_life_days": 30, "max_items_per_entity": 20, "neighbor_limit": 100, "binary_similarity": "jaccard", "shrinkage": 3}
+FIT {"graph": "weighted_session", "train_end_inclusive": 3000000, "input_events": 4, "entity_item_pairs_before_cap": 4, "entity_item_pairs_after_cap": 4, "entities": 2, "catalog_items": 4, "half_life_days": 30, "max_items_per_entity": 20, "neighbor_limit": 100, "binary_similarity": "jaccard", "shrinkage": 3}
+test_session_graph_does_not_link_items_across_separate_sessions (test_session_training.SparseTrainingTests.test_session_graph_does_not_link_items_across_separate_sessions) ... ok
+FIT {"graph": "weighted_user", "train_end_inclusive": 100, "input_events": 5, "entity_item_pairs_before_cap": 4, "entity_item_pairs_after_cap": 4, "entities": 2, "catalog_items": 3, "half_life_days": 30, "max_items_per_entity": 20, "neighbor_limit": 100, "binary_similarity": "jaccard", "shrinkage": 3}
+FIT {"graph": "weighted_user", "train_end_inclusive": 100, "input_events": 105, "entity_item_pairs_before_cap": 4, "entity_item_pairs_after_cap": 4, "entities": 2, "catalog_items": 3, "half_life_days": 30, "max_items_per_entity": 20, "neighbor_limit": 100, "binary_similarity": "jaccard", "shrinkage": 3}
+test_weighted_graph_uses_maximum_decayed_intent_not_event_sum (test_session_training.SparseTrainingTests.test_weighted_graph_uses_maximum_decayed_intent_not_event_sum) ... ok
+test_continuation_graph_uses_only_strictly_later_new_items (test_session_transition.TransitionTests.test_continuation_graph_uses_only_strictly_later_new_items) ... ok
+test_sqlite_inference_matches_offline_fusion_and_filters_seen (test_session_transition.TransitionTests.test_sqlite_inference_matches_offline_fusion_and_filters_seen) ... ok
+test_strength_sqlite_inference_matches_offline_and_filters_seen (test_session_transition.TransitionTests.test_strength_sqlite_inference_matches_offline_and_filters_seen) ... ok
+test_training_uses_only_prior_timestamp_groups_and_new_items (test_session_transition.TransitionTests.test_training_uses_only_prior_timestamp_groups_and_new_items) ... ok
+
+----------------------------------------------------------------------
+Ran 59 tests in 0.937s
+
+OK

@@ -1,0 +1,370 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-10-24T12:20:32.996227+00:00",
+  "run_id": "strength-20261022-v1",
+  "base_url": "http://127.0.0.1:8002",
+  "scope": "Snapshot demo from release ZIP, not full Kafka/Spark/HDFS/Airflow rerun.",
+  "health": {
+    "status": "ready",
+    "model": {
+      "ready": true,
+      "run_id": "strength-20261022-v1",
+      "model_version": "strength-20261022-v1:session-serving-v1",
+      "trained_at_utc": "2026-10-22T13:53:11.450777+00:00",
+      "algorithm": "item_knn_hybrid",
+      "stale": false,
+      "data_run_id": "full-20261022-1031"
+    },
+    "dependencies": {
+      "redis": {
+        "enabled": true,
+        "status": "ok",
+        "required_for_ready": false
+      },
+      "mongodb": {
+        "enabled": true,
+        "status": "ok",
+        "required_for_ready": false
+      }
+    }
+  },
+  "static_resources": {
+    "/": {
+      "status": 200,
+      "bytes": 19438
+    },
+    "/docs": {
+      "status": 200,
+      "bytes": 957
+    },
+    "/openapi.json": {
+      "status": 200,
+      "bytes": 3857
+    },
+    "/static/app.js": {
+      "status": 200,
+      "bytes": 47029
+    },
+    "/static/storefront.css": {
+      "status": 200,
+      "bytes": 42523
+    },
+    "/static/product-catalog.js": {
+      "status": 200,
+      "bytes": 6247
+    },
+    "/static/images/catalog/laptop.svg": {
+      "status": 200,
+      "bytes": 995
+    }
+  },
+  "checks": {
+    "model_version": true,
+    "session_model_available": true,
+    "kpis_available": true,
+    "click_changes_ranking": true,
+    "sessions_isolated": true,
+    "seen_and_duplicate_filter": true,
+    "known_user_full_seen_filter": true,
+    "future_timestamp_rejected": true,
+    "historical_metrics_unchanged": true,
+    "seven_protected_artifacts_unchanged": true
+  },
+  "artifact_sha256": {
+    "data/raw/events.csv": "3745aa83238b1e6d44d8fda209807899f420084398f94ddf745f3cbcfecbf9e7",
+    "outputs/latest_run.json": "91429d536b389268fdf466495d5b1b2fd8cbb5c9f53a655f898c8f6b50b2bc32",
+    "outputs/runs/strength-20261022-v1/serving/model_bundle.json": "9a353b3549a443826212dbb4180e1fcc8f08913534f1f6f41f8132af6529fe93",
+    "outputs/runs/strength-20261022-v1/serving/seen_items.sqlite": "fa8bedc8c1cce303a61686181b3960b3279b9f854d29d32b2447fe0479eb9448",
+    "outputs/runs/strength-20261022-v1/serving/session_neighbors.sqlite": "95ddc56a782233c76d4e24c609a08077738e9756a539b038c29f6801f4134e68",
+    "outputs/runs/strength-20261022-v1/metrics/session_heldout_comparison.json": "4f3b431b613d19aa9dee785a135498fab57376431a39b0be1a7ca726a5e9f8f7",
+    "outputs/runs/strength-20261022-v1/metrics/session_validation_selection.json": "f8042594be465c8fceec0ee4db63edb47a045e3d50b55512748e2b5bedfb3090"
+  },
+  "benchmark": {
+    "requests": 100,
+    "successful": 100,
+    "concurrency": 4,
+    "warmups": 3,
+    "elapsed_seconds": 4.962849300000016,
+    "latency_ms": {
+      "mean": 194.53656600000159,
+      "p50": 185.43990000011945,
+      "p95": 242.36430000019027,
+      "p99": 290.65559999980906
+    },
+    "scope": "Windows host -> local Docker HTTP, two fixed seeds; not production SLA."
+  },
+  "examples": {
+    "empty": {
+      "run_id": "strength-20261022-v1",
+      "data_run_id": "full-20261022-1031",
+      "model_version": "strength-20261022-v1:session-serving-v1",
+      "session_model_version": "strength-20261022-v1:session-serving-v1:session",
+      "metric_model_version": "strength-20261022-v1:remaining-session-evaluation-v1",
+      "algorithm": "session_item_item",
+      "visitorid": null,
+      "requested_k": 10,
+      "returned": 10,
+      "items": [
+        {
+          "itemid": 434782,
+          "score": 0.0
+        },
+        {
+          "itemid": 17114,
+          "score": 0.0
+        },
+        {
+          "itemid": 187946,
+          "score": 0.0
+        },
+        {
+          "itemid": 245085,
+          "score": 0.0
+        },
+        {
+          "itemid": 461686,
+          "score": 0.0
+        },
+        {
+          "itemid": 320130,
+          "score": 0.0
+        },
+        {
+          "itemid": 76060,
+          "score": 0.0
+        },
+        {
+          "itemid": 96924,
+          "score": 0.0
+        },
+        {
+          "itemid": 188051,
+          "score": 0.0
+        },
+        {
+          "itemid": 5411,
+          "score": 0.0
+        }
+      ],
+      "source": "popular_fallback",
+      "context_events": 0,
+      "context_items": 0,
+      "matched_seeds": 0,
+      "seen_items_excluded": 0,
+      "history_sources": [],
+      "history_runs": [],
+      "warnings": [],
+      "cache_hit": false,
+      "persistence": "client_context_only",
+      "model_stale": false,
+      "generated_at_utc": "2026-10-24T12:20:25.006444+00:00",
+      "request_ms": 321.789
+    },
+    "view": {
+      "run_id": "strength-20261022-v1",
+      "data_run_id": "full-20261022-1031",
+      "model_version": "strength-20261022-v1:session-serving-v1",
+      "session_model_version": "strength-20261022-v1:session-serving-v1:session",
+      "metric_model_version": "strength-20261022-v1:remaining-session-evaluation-v1",
+      "algorithm": "session_item_item",
+      "visitorid": null,
+      "requested_k": 10,
+      "returned": 10,
+      "items": [
+        {
+          "itemid": 238677,
+          "score": 0.9276309271789385
+        },
+        {
+          "itemid": 336437,
+          "score": 0.8943375672974064
+        },
+        {
+          "itemid": 75643,
+          "score": 0.8219684944763449
+        },
+        {
+          "itemid": 407489,
+          "score": 0.8219684944763449
+        },
+        {
+          "itemid": 375846,
+          "score": 0.7432843469848501
+        },
+        {
+          "itemid": 382552,
+          "score": 0.7163649778038146
+        },
+        {
+          "itemid": 35403,
+          "score": 0.6565783998692895
+        },
+        {
+          "itemid": 323328,
+          "score": 0.6565783998692895
+        },
+        {
+          "itemid": 191049,
+          "score": 0.6190866466112976
+        },
+        {
+          "itemid": 322051,
+          "score": 0.6190866466112976
+        }
+      ],
+      "source": "session_strength_fusion",
+      "context_events": 1,
+      "context_items": 1,
+      "matched_seeds": 2,
+      "seen_items_excluded": 1,
+      "history_sources": [],
+      "history_runs": [],
+      "warnings": [],
+      "cache_hit": false,
+      "persistence": "client_context_only",
+      "model_stale": false,
+      "generated_at_utc": "2026-10-24T12:20:25.349798+00:00",
+      "request_ms": 335.969
+    },
+    "view_then_purchase": {
+      "run_id": "strength-20261022-v1",
+      "data_run_id": "full-20261022-1031",
+      "model_version": "strength-20261022-v1:session-serving-v1",
+      "session_model_version": "strength-20261022-v1:session-serving-v1:session",
+      "metric_model_version": "strength-20261022-v1:remaining-session-evaluation-v1",
+      "algorithm": "session_item_item",
+      "visitorid": null,
+      "requested_k": 10,
+      "returned": 10,
+      "items": [
+        {
+          "itemid": 238677,
+          "score": 0.9276309271789385
+        },
+        {
+          "itemid": 336437,
+          "score": 0.8943375672974064
+        },
+        {
+          "itemid": 75643,
+          "score": 0.8219684944763449
+        },
+        {
+          "itemid": 407489,
+          "score": 0.8219684944763449
+        },
+        {
+          "itemid": 389158,
+          "score": 0.7861898672502526
+        },
+        {
+          "itemid": 218746,
+          "score": 0.7806735399516669
+        },
+        {
+          "itemid": 375846,
+          "score": 0.7432843469848501
+        },
+        {
+          "itemid": 382552,
+          "score": 0.7163649778038146
+        },
+        {
+          "itemid": 108486,
+          "score": 0.6878183818384741
+        },
+        {
+          "itemid": 51650,
+          "score": 0.6817540558428954
+        }
+      ],
+      "source": "session_strength_fusion",
+      "context_events": 2,
+      "context_items": 2,
+      "matched_seeds": 4,
+      "seen_items_excluded": 2,
+      "history_sources": [],
+      "history_runs": [],
+      "warnings": [],
+      "cache_hit": false,
+      "persistence": "client_context_only",
+      "model_stale": false,
+      "generated_at_utc": "2026-10-24T12:20:25.702903+00:00",
+      "request_ms": 347.346
+    },
+    "known_user": {
+      "run_id": "strength-20261022-v1",
+      "data_run_id": "full-20261022-1031",
+      "model_version": "strength-20261022-v1:session-serving-v1",
+      "session_model_version": "strength-20261022-v1:session-serving-v1:session",
+      "metric_model_version": "strength-20261022-v1:remaining-session-evaluation-v1",
+      "algorithm": "session_item_item",
+      "visitorid": 1000484,
+      "requested_k": 10,
+      "returned": 10,
+      "items": [
+        {
+          "itemid": 238677,
+          "score": 0.9276309271789385
+        },
+        {
+          "itemid": 336437,
+          "score": 0.8943375672974064
+        },
+        {
+          "itemid": 407489,
+          "score": 0.8219684944763449
+        },
+        {
+          "itemid": 375846,
+          "score": 0.7432843469848501
+        },
+        {
+          "itemid": 382552,
+          "score": 0.7163649778038146
+        },
+        {
+          "itemid": 35403,
+          "score": 0.6565783998692895
+        },
+        {
+          "itemid": 323328,
+          "score": 0.6565783998692895
+        },
+        {
+          "itemid": 191049,
+          "score": 0.6190866466112976
+        },
+        {
+          "itemid": 322051,
+          "score": 0.6190866466112976
+        },
+        {
+          "itemid": 313931,
+          "score": 0.5989467796874437
+        }
+      ],
+      "source": "session_strength_fusion",
+      "context_events": 1,
+      "context_items": 1,
+      "matched_seeds": 2,
+      "seen_items_excluded": 2,
+      "history_sources": [
+        "bundle",
+        "sqlite",
+        "redis",
+        "mongodb"
+      ],
+      "history_runs": [
+        "strength-20261022-v1",
+        "full-20261022-1031"
+      ],
+      "warnings": [],
+      "cache_hit": false,
+      "persistence": "client_context_only",
+      "model_stale": false,
+      "generated_at_utc": "2026-10-24T12:20:26.385001+00:00",
+      "request_ms": 385.133
+    }
+  }
+}

@@ -1,9 +1,153 @@
-# Kiến trúc thống nhất Phase 1–7
+# Kiến trúc hiện tại: pipeline Big Data và gợi ý theo phiên
 
-Đây là một gói mã nguồn và dữ liệu chạy bằng Docker Compose trên một máy, có
-đường đi đầy đủ từ Kafka tới API/dashboard. Mã nguồn và các bài kiểm tra cần
-được phân biệt với kết quả thực thi; xem evidence và metrics của run để biết
-thành phần nào đã được kiểm chứng trong môi trường bàn giao.
+Cập nhật ngày 24/10/2026 theo snapshot `strength-20261022-v1` trong ZIP
+`storefront-v2`. Hệ thống có hai đường chạy cần trình bày riêng:
+
+1. **Demo cửa hàng đang phục vụ:** FastAPI đọc model bundle và hai SQLite đã
+   xuất sẵn; nhận ngữ cảnh phiên từ trình duyệt và tính Top K. Model chính là
+   **conditional item-item kết hợp chuyển tiếp**, trộn độ mạnh liên kết 75/25.
+2. **Pipeline dữ liệu Phase 1–7:** replay CSV qua Kafka, Spark, Delta/HDFS và
+   MongoDB/Redis; có nhánh huấn luyện ALS ban đầu. Pipeline và các thí nghiệm
+   graph chạy riêng, không chạy lại khi khách bấm Xem/Mua trên cửa hàng.
+
+Mã nguồn không đồng nghĩa mọi thành phần đã được chạy trong lần demo hiện tại.
+Lần kiểm tra ZIP ngày 24/10 chỉ kiểm tra snapshot/API/cửa hàng; không phải một
+lần xác minh mới toàn bộ Kafka → Spark → HDFS → Airflow. Xem
+[kiểm tra ZIP](ZIP_DEMO_VERIFICATION.md) và [ví dụ dữ liệu thật](REAL_DATA_EXAMPLE.md).
+
+## Luồng phục vụ đang dùng
+
+```mermaid
+flowchart LR
+  H["CSV lịch sử đã làm sạch"] --> T["Huấn luyện graph offline"]
+  T --> I["SQLite: neighbors và transitions"]
+  H --> S["SQLite: seen_items"]
+  T --> B["Bundle: cấu hình, popularity, phiên bản, metrics"]
+  UI["Cửa hàng: ngữ cảnh trong tab"] -->|"POST events + k"| API["FastAPI"]
+  B --> API
+  I --> API
+  S -->|"lọc lịch sử nếu có visitorid"| API
+  MR["MongoDB / Redis: lịch sử và cache user"] --> API
+  API --> R["Xếp hạng 75% item-item + 25% chuyển tiếp"]
+  R --> F["Loại ID đã tương tác, bổ sung popularity nếu thiếu"]
+  F -->|"Top K ID + score"| UI
+```
+
+Demo snapshot khởi động ba service: **api, mongodb, redis**. Không cần bật
+Kafka/Spark/HDFS/Airflow để đọc snapshot. MongoDB/Redis mới, chưa có projection
+lịch sử, vẫn chạy được vì bundle và SQLite chứa dữ liệu phục vụ cần thiết.
+Frontend gán tên/ảnh/giá/danh mục minh họa cố định theo ID; các thuộc tính này
+không tham gia mô hình và không phải thông tin sản phẩm thật.
+
+### Thành phần và trách nhiệm
+
+| Thành phần | Vai trò hiện tại |
+| --- | --- |
+| `service/static/` | Cửa hàng, giỏ mô phỏng, ngữ cảnh phiên, trình bày kết quả |
+| `POST /api/session/recommendations` | Tính lại gợi ý từ ngữ cảnh gửi lên; không cache kết quả phiên dùng chung |
+| `pipeline/session_model.py` | Chọn seed, đọc hàng xóm SQLite, gọi scorer dùng chung với offline |
+| `pipeline/session_transition.py` | Học chuyển tiếp và hàm `strength_fused_rank` |
+| `pipeline/session_upgrade.py` | `EventData`, tạo cohort và `SparseGraph` |
+| `model_bundle.json` | Cấu hình đang chọn, popularity, metrics, phiên bản; còn giữ gợi ý user tĩnh |
+| `session_neighbors.sqlite` | Hai bảng `neighbors` và `transitions`, tra theo seed |
+| `seen_items.sqlite` | Lịch sử user đầy đủ để loại ID đã thấy khi truyền visitor ID |
+| `GET /api/recommendations/{visitorid}` | Luồng user tĩnh `item_knn_hybrid`; ngoài 1.000 user có gợi ý xuất sẵn thì fallback |
+| `GET /api/metrics` | Đọc KPI/metrics lịch sử đúng run, không chấm lại từ lượt bấm thử |
+
+### Model thực sự học gì?
+
+Nhánh item-item dùng ma trận **visitor–item nhị phân**: mỗi user chỉ đóng góp
+một lần cho một ID, giữ tối đa 20 ID phân biệt gần nhất/user. Với seed A và
+ứng viên B, `n(A)` là số user có A, `n(A,B)` là số user có cả hai sau giới hạn:
+
+```text
+co_score(A,B) = n(A,B) / n(A) × n(A,B) / (n(A,B) + 3)
+```
+
+Hệ số cuối giảm ảnh hưởng của liên kết có ít quan sát. Giữ tối đa 100 hàng xóm
+mỗi seed; đây là liên quan qua hành vi, không phải phân loại hai món cùng loại.
+
+Nhánh chuyển tiếp đếm A → B giữa hai nhóm timestamp liên tiếp của cùng user
+trong phiên gap 30 phút; B phải mới trong phiên. Hai ID có cùng timestamp
+không được dùng để dự đoán lẫn nhau. Giữ tối đa 100 cạnh mỗi seed.
+
+Model nhận tối đa 100 sự kiện/request, chọn 5 ID phân biệt gần nhất làm seed.
+Snapshot đang phục vụ có cấu hình sau (cấu hình trong bundle ưu tiên hơn default):
+
+| Tham số | Giá trị đang dùng |
+| --- | --- |
+| Graph / similarity | `binary_user` / `conditional` |
+| Trọng số view / addtocart / transaction | **1 / 1 / 1** |
+| Giảm trọng số theo vị trí gần đây | `0.8^r`, r=0 cho seed mới nhất |
+| Giảm trọng số liên tục theo số phút | Tắt: `query_half_life_minutes=null` |
+| Hệ số chuyển tiếp | 0,25; item-item 0,75 |
+| Chuẩn hóa và số mũ | Mỗi seed/nhánh chia cạnh mạnh nhất rồi lấy căn bậc hai |
+| Popularity trong điểm fusion | 0; chỉ bổ sung cuối danh sách nếu thiếu |
+
+```text
+score(B) = tổng theo seed A của affinity(A) ×
+           [0,75 × sqrt(co(A,B)/max_co(A))
+            + 0,25 × sqrt(trans(A,B)/max_trans(A))]
+```
+
+Cạnh/nhánh không tồn tại đóng góp 0; không tự phân phối lại trọng số. Điểm
+không phải xác suất mua và có thể lớn hơn 1 khi cộng nhiều seed. Lọc toàn bộ
+ID trong ngữ cảnh, thêm lịch sử user nếu có visitorid; xếp score giảm dần,
+hòa điểm thì ID tăng dần. Bổ sung ID phổ biến chưa thấy nếu chưa đủ K.
+
+**Không nói model đang phục vụ coi mua mạnh gấp 5 lần xem.** Mức 1/3/5 còn
+ở cấu hình mặc định, nhánh ALS và các thí nghiệm cũ; bundle hiện chọn 1/1/1.
+Đổi loại hành vi trên cùng một seed không đảm bảo đổi thứ hạng. ID mới và thứ
+tự seed có thể làm thay đổi kết quả.
+
+### Bấm Mua có huấn luyện lại không?
+
+Không. Tab giữ context; Xem/+Giỏ/Mua gửi sự kiện mô phỏng tới scorer cố định.
+API trả `persistence=client_context_only`. Nó không ghi vào CSV, Kafka, tập
+train hoặc đơn hàng; không cập nhật trọng số model. Mua ngay trên thẻ ghi một
+`transaction`, không tự thêm view/cart. Phiên mới xóa context và giỏ; frontend
+cũng hết phiên sau khoảng cách tương tác trên 30 phút. API dùng đúng context
+được gửi lên, không tự tách phiên từ những request của trình duyệt.
+
+### Đánh giá công bằng và phiên bản
+
+Phép đo chính là Top 10 cho **mọi ID mới còn lại trong phiên**, trên 5.000
+query của 4.759 visitor có ngữ cảnh trước truy vấn. Dùng cùng cohort, ngữ cảnh,
+bộ lọc và luật tạo ứng viên giữa các phương án, không lấy mẫu negative. Đây
+không phải đánh giá mọi user, mọi lượt đầu tiên hay người hoàn toàn chưa có
+tương tác. Eligible 38.945 / 274.857 phiên hoạt động; không bỏ qua điều kiện này.
+
+Chọn tham số qua hai fold validation theo thời gian. Graph chấm test chỉ đọc
+timestamp ≤ **1440538554824**; context đứng trước target. Sau khi giữ cố định
+metrics, graph phục vụ được refit trên đủ **2.755.641 event sạch**, có giới hạn
+20 ID/user như trên. Không dùng graph full để tự chấm lại tương lai lịch sử.
+
+| Chính sách, cùng phép chấm | Precision@10 | Recall@10 | NDCG@10 |
+| --- | ---: | ---: | ---: |
+| Strength fusion hiện tại | 4,148% | 28,2803% | 19,7041% |
+| Bản trước RRF 75/25 | 4,116% | 28,0809% | 19,3253% |
+| Popularity | 0,172% | 0,9148% | 0,4982% |
+
+Recall là trung bình recall/query; không phải hit-rate. 1.731/5.000 query có
+ít nhất một hit cho hit-rate 34,62%. Chỉ NDCG có khoảng tin cậy 95% mức tăng
+hoàn toàn dương so với RRF. Test đã được xem trong các vòng phát triển; cần
+giai đoạn mới để xác nhận. Không có kết quả A/B, CTR hoặc tăng doanh thu thật.
+
+Run `strength-20261022-v1` có `model_version` cấp bundle,
+`session_model.model_version` cấp scorer và `metric_model_version` cho graph
+đánh giá. API user tĩnh có metrics riêng, không so trực tiếp với session.
+Xem [báo cáo JSON](../reports/metrics/session_heldout_comparison.json).
+
+### Kiểm tra tính toàn vẹn snapshot
+
+Đối chiếu checksum ZIP phát hành và `PACKAGE_SHA256.json` cho dữ liệu, bundle,
+hai SQLite và báo cáo. `session_model.index_profile.bytes/sha256` trong bundle
+gốc còn là thống kê cũ trước khi thêm bảng chuyển tiếp; không dùng hai trường
+đó để xác thực toàn file SQLite hiện nay. Manifest gói và `PRAGMA quick_check`
+là bằng chứng sử dụng trong lần kiểm tra ZIP. Lần cập nhật tài liệu này giữ
+nguyên model và các chỉ số lịch sử.
+
+## Pipeline dữ liệu và các nhánh thí nghiệm Phase 1–7
 
 ## Phạm vi triển khai và giới hạn thiết kế
 
@@ -24,7 +168,7 @@ thành phần nào đã được kiểm chứng trong môi trường bàn giao.
   pipeline; live writer phải được người chạy phối hợp dừng trước retrain. Không
   chạy hai live process ghi cùng output/checkpoint.
 
-## Đường đi dữ liệu
+### Đường đi dữ liệu khi chạy pipeline đầy đủ
 
 ```mermaid
 flowchart LR
@@ -38,9 +182,12 @@ flowchart LR
   C --> L[Delta Bronze/Silver/Gold trên HDFS]
   C --> O[Mongo events và projections; Redis keys]
   W --> O
-  L --> ML[MLlib temporal CV và ALS]
-  ML --> B[Model bundle, SQLite seen, Parquet recommendations]
+  L --> ML[Nhánh ALS ban đầu: MLlib temporal CV]
+  ML --> B[Bundle ALS và SQLite seen của run ALS]
   B --> API[FastAPI và dashboard]
+  C --> G[Thí nghiệm graph offline từ snapshot sạch]
+  G --> GB[Bundle và SQLite graph theo phiên]
+  GB --> API
   O --> API
   AF[Airflow theo lịch] --> J[Typed retrain worker]
   J --> ML
@@ -166,7 +313,12 @@ bước; không khẳng định exactly-once xuyên Delta/Mongo/Redis.
 minh không có partial commit. Nó không đo concurrent-writer isolation hoặc
 tính bền vững sau hỏng toàn cụm.
 
-## MLlib, đánh giá thời gian và phục vụ
+## Nhánh ALS ban đầu: MLlib và đánh giá theo thời gian
+
+Phần này mô tả `pipeline/train.py` và runner Phase 1–7 ban đầu, **không phải
+thuật toán chính của snapshot strength đang chọn**. Chạy runner/retrain ALS
+có thể kích hoạt một run ALS mới; Airflow hiện không tự chạy chuỗi thí nghiệm
+strength hoặc tự chọn lại graph champion.
 
 Training đọc Delta Silver, dedup trước khi chia thời gian; ID user/item phải
 là số nguyên không âm int32. Chỉ view/cart/purchase tham gia ALS. Mỗi phần
